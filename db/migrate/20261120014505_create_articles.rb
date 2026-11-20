@@ -1,7 +1,7 @@
 class CreateArticles < ActiveRecord::Migration[8.1]
   def change
     create_table :articles do |t|
-      t.string :tile
+      t.string :title
       t.text :body
 
       t.timestamps
