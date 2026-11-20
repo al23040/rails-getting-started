@@ -1,6 +1,6 @@
 <h1>New Article</h1>
 
-<%= form_with model: @article do |form| %>
+<%= render "form", article: @article %>
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
@@ -10,7 +10,7 @@
   <div>
     <%= form.label :body %><br>
     <%= form.text_area :body %>
-	<% @artcile.errros.full_meaages_for(:body).each do |message| %>
+	<% @article.errors.full_messages_for(:body).each do |message| %>
   </div>
 
   <div>
