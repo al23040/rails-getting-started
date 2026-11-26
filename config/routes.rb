@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   root "articles#index"
 
   resources :articles do
-    resources :comments
+    resources :comments do
+      resources :likes, only: [:create]
+    end
   end
 end
