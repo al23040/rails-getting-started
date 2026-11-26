@@ -10,6 +10,11 @@
 	</p>
 
 	<p>
+		<%= button_to "Like 👍", [comment.article, comment, :likes] %>
+		<%= comment.likes.count %>
+	</p>
+
+	<p>
 		<%= link_to "Destroy Comment", [comment.article, comment],data: 
 		{
 			turbo_method: :delete,
