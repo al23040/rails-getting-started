@@ -39,12 +39,9 @@ end
 
 def destroy
 	@article = Article.find(params[:id])
+	@article.destroy
 
-	if @article.update(article_params)
-	redirect_to @article
-	else
-	render :edit, status: :unprocessable_entity
-	end
+	redirect_to root_path, status: :see_other
 end
 
 private 
